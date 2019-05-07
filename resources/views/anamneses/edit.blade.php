@@ -8,7 +8,7 @@
 </style>
 <div class="card uper">
   <div class="card-header"> 
-    Edit Share
+    Editar anamnese
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -37,7 +37,7 @@
                 <input type="radio" name="answer" value="Nao">Não
             </label>
           </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
       </form>
   </div>
 </div>

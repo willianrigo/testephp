@@ -49,7 +49,7 @@ class AnamneseController extends Controller
         
         $anamnese->save();
 
-        return redirect('/anamneses')->with('Success', 'Anamnese has been added');
+        return redirect('/anamneses')->with('success', 'Anamnese adicionada');
     }
 
     /**
@@ -99,7 +99,7 @@ class AnamneseController extends Controller
         $anamnese->save();
 
 
-        return redirect('/anamneses')->with('Success', 'Anamnese has been updated');
+        return redirect('/anamneses')->with('success', 'Anamnese alterada');
     }
     /**
      * Remove the specified resource from storage.
@@ -112,7 +112,7 @@ class AnamneseController extends Controller
         $anamnese = Anamnese::find($id);
         $anamnese->delete();
 
-        return redirect('/anamneses')->with('success', 'Anamnese has been deleted Successfully');
+        return redirect('/anamneses')->with('success', 'Anamnese excluída');
 
     }
 }
