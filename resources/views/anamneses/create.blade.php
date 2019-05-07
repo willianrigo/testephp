@@ -1,0 +1,46 @@
+<!doctype html>
+@extends('layout')
+
+@section('content')
+<style>
+  .uper {
+    margin-top: 40px;
+  }
+  button {
+    
+  }
+</style>
+<div class="card uper">
+  <div class="card-header">
+    Nova anamnese
+  </div>
+  <div class="card-body">
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div><br />
+    @endif
+      <form method="post" action="{{ route('anamneses.store') }}">
+          <div class="form-group">
+              @csrf
+              <label>Anamnese:</label>
+              <input type="text" class="form-control" name="question"/>
+          </div>
+          <div id="form-group">
+            <label>Resposta</label>
+              <label>
+                <input type="radio" name="answer" value="Sim" checked>Sim
+              </label>
+              <label>
+                <input type="radio" name="answer" value="Nao">Não
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+  </div>
+</div>
+@endsection
